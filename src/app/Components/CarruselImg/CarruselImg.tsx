@@ -47,7 +47,7 @@ const CarouselImg: React.FC = () => {
     if (isAutoPlaying) {
       interval = setInterval(() => {
         nextSlide();
-      }, 5000); // Cambia la imagen cada 5 segundos
+      }, 5000); 
     }
     return () => clearInterval(interval); 
   }, [isAutoPlaying]);
