@@ -1,0 +1,45 @@
+.brand-carousel-container {
+  position: relative;
+  width: 100%;
+  padding-top: 60px; /* Ajuste según sea necesario */
+}
+
+.brand-slide {
+  display: flex;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Centra las imágenes verticalmente */
+}
+
+.brand-logo {
+  max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: contain; /* Ajusta la imagen dentro de su contenedor sin distorsionarla */
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center; /* Centra cada slide */
+}
+
+.slick-prev, .slick-next {
+  z-index: 1; /* Asegura que los controles del carrusel se vean encima */
+}
+
+/* Diseño responsive */
+@media (max-width: 1024px) {
+  .brand-logo {
+    max-width: 80%; /* Ajuste para pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-logo {
+    max-width: 60%; /* Ajuste para pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    max-width: 50%; /* Ajuste para pantallas más pequeñas */
+  }
+}

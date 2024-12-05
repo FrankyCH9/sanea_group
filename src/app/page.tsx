@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Header from "./Components/Header/Header";
 import CarruselImg from "./Components/CarruselImg/CarruselImg";
-import Services from "./Components/Services/Services";
 import Footer from "./Components/Footer/Footer";
+import Carrusel from "./Components/CarruselImg/Carrusel";
+import WhatsAppWidget from "./Components/whatsap/whatsapwidget";
+import AboutSection from "./Components/about/AboutSection";
 
 
 export default function Home() {
@@ -10,11 +12,12 @@ export default function Home() {
   return (
     <main>
       <Header/>
-      <CarruselImg/>
-      <div className="App">
-      <Services />
+       
+      <Carrusel/>
+      <WhatsAppWidget/>
       <Footer/>
-    </div>
+    
+    
     </main>
   );
 }

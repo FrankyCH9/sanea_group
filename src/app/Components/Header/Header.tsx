@@ -1,83 +1,115 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail, MdPhone } from 'react-icons/md';
-import { IoChevronDown } from 'react-icons/io5'; // Using a better arrow icon
+import { IoChevronDown } from 'react-icons/io5'; // Icono de flecha
+import { Rat, Bug, SprayCan, Droplets, FlaskRound, Bird, Flower2 } from 'lucide-react';
 
-const Header = () => {
+const HeaderAbout = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Establecer el estado para indicar que estamos en el cliente
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
-    <header>
-      {/* Fila 1: Información de contacto con fondo oscuro */}
-      <div className="bg-[#1c1e2b] text-white px-6 py-4 shadow-md">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex space-x-8">
-            <a href="mailto:comercial@saneagrouperu.com" className="text-sm flex items-center hover:text-emerald-400  transition-all">
-              <MdEmail className="inline-block mr-2 text-lg" />
-              comercial@saneagrouperu.com
-            </a>
-            <a href="tel:+999899318" className="text-sm flex items-center hover:text-emerald-400  transition-all">
-              <MdPhone className="inline-block mr-2 text-lg" />
-              99899318
-            </a>
-            <a href="tel:+955914878" className="text-sm flex items-center hover:text-emerald-400  transition-all">
-              <MdPhone className="inline-block mr-2 text-lg" />
-              955914878
-            </a>
-          </div>
-          <div className="flex space-x-4">
-            <a href="https://www.facebook.com/saneagroup" className="text-gray-300 hover:text-emerald-400  transition-all text-lg">
-              <FaFacebookF />
-            </a>
-            <a href="https://www.instagram.com/sanea_group/" className="text-gray-300 hover:text-emerald-400 transition-all text-lg">
-              <FaInstagram />
-            </a>
-            <a href="https://x.com/home" className="text-gray-300 hover:text-emerald-400  transition-all text-lg">
-              <FaTwitter />
-            </a>
-            <a href="https://www.linkedin.com/company/sanea-group-ingenieria-y-saneamiento-ambiental/" className="text-gray-300 hover:text-white transition-all text-lg">
-              <FaLinkedinIn />
-            </a>
-          </div>
-        </div>
-      </div>
+    <div className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat">
+      {/* Video solo se carga en el cliente */}
+      {isClient && (
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          onError={(e) => console.error("Error al cargar el video:", e)}  // Manejo de errores
+        >
+          <source
+            src="/video/1.mp4"  // Verifica que esta ruta sea correcta
+            type="video/mp4"
+          />
+        </video>
+      )}
 
-      {/* Fila 2: Logo y Navegación con fondo blanco */}
-      <div className="bg-white text-gray-900 px-8 py-6 shadow-md">
-        <div className="container mx-auto flex justify-between items-center">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30"></div>
+
+      {/* Header Content */}
+      <header className="relative z-10 w-full max-w-7xl mx-auto px-8 py-6 text-white">
+        <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-6">
             <img src="/images/logog.png" alt="Logo" className="h-16" />
           </div>
 
+          {/* Menú hamburguesa */}
+          <div className="lg:hidden flex items-center space-x-6">
+            <button
+              className="text-white text-2xl"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? '×' : '≡'}
+            </button>
+          </div>
+
           {/* Navegación */}
-          <nav className="flex space-x-12 items-center">
-            <a href="#" className="text-lg text-gray-700 hover:text-emerald-400  transition-all">Inicio</a>
-            <a href="#" className="text-lg text-gray-700 hover:text-emerald-400  transition-all">Sobre Nosotros</a>
+          <nav
+            className={`lg:flex space-x-12 items-center 
+              ${menuOpen ? 'block' : 'hidden'} 
+              lg:block transition-transform duration-300 ease-in-out transform ${menuOpen ? 'translate-y-0' : '-translate-y-full'}`}
+          >
+            <a
+              href="#"
+              className="text-lg text-white relative group transition-all"
+            >
+              Inicio
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
+            </a>
+            <a
+              href="#about"
+              className="text-lg text-white relative group transition-all"
+            >
+              Sobre Nosotros
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
+            </a>
             <div className="relative">
-              <button 
-                onClick={() => setDropdownOpen(!dropdownOpen)} 
-                className="text-lg text-gray-700 hover:text-emerald-400  flex items-center transition-all">
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="text-lg text-white hover:text-emerald-400 flex items-center transition-all"
+              >
                 Servicios
-                <IoChevronDown className={`ml-2 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
+                <IoChevronDown
+                  className={`ml-2 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
+                />
               </button>
               {dropdownOpen && (
                 <div className="absolute left-0 w-48 mt-2 bg-white text-gray-900 shadow-lg rounded-md z-10">
                   <ul className="py-2">
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-emerald-400 ">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-emerald-400"
+                      >
                         <span>Servicio 1</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-emerald-400 ">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-emerald-400"
+                      >
                         <span>Servicio 2</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-emerald-400 ">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-emerald-400"
+                      >
                         <span>Servicio 3</span>
                       </a>
                     </li>
@@ -85,12 +117,95 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <a href="#" className="text-lg text-gray-700 hover:text-emerald-400  transition-all">Contactanos</a>
+            <a
+              href="#contact"
+              className="text-lg text-white relative group transition-all"
+            >
+              Contactanos
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
+            </a>
           </nav>
         </div>
+      </header>
+
+      {/* About Section */}
+      <div id="about" className="relative z-10 w-full max-w-7xl mx-auto p-8 text-white min-h-screen">
+        <div className="text-center mb-16">
+          {/* Título con animación */}
+          <h2 className="text-5xl font-extrabold leading-tight tracking-wide animate-slide-in">
+            Aportamos Soluciones con Experiencia Profunda
+          </h2>
+          <hr className="my-4 border-t-2 border-gray-300" />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 px-0">
+          {/* Servicio 1 */}
+          <div className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+            <Rat className="mx-auto w-20 h-20 text-yellow-400" />
+            <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Desratización</h3>
+            <p className="text-base mt-2 text-center animate-fade-in">
+              Control de roedores a través de captura y monitoreo.
+            </p>
+          </div>
+
+          {/* Servicio 2 */}
+          <div className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+            <Bug className="mx-auto w-20 h-20 text-green-400" />
+            <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Desinsectación</h3>
+            <p className="text-base mt-2 text-center animate-fade-in">
+              Erradicación de insectos voladores y rastreros.
+            </p>
+          </div>
+
+          {/* Servicio 3 */}
+          <div className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+            <SprayCan className="mx-auto w-20 h-20 text-blue-400" />
+            <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Desinfección</h3>
+            <p className="text-base mt-2 text-center animate-fade-in">
+              Desinfección especializada para la erradicación de virus, hongos y bacterias.
+            </p>
+          </div>
+
+          {/* Servicio 4 */}
+          <div className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+            <Droplets className="mx-auto w-20 h-20 text-purple-400" />
+            <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Limpieza de Reservorios de agua</h3>
+            <p className="text-base mt-2 text-center animate-fade-in">
+              Desinfección y limpieza de reservorios de agua.
+            </p>
+          </div>
+
+          {/* Servicio 5 */}
+          <div className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+            <FlaskRound className="mx-auto w-20 h-20 text-red-400" />
+            <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Mantenimiento de Reservorios de agua</h3>
+            <p className="text-base mt-2 text-center animate-fade-in">
+              Servicios de mantenimiento especializado para reservorios de agua.
+            </p>
+          </div>
+
+          {/* Servicio 6 */}
+          <div className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+            <Bird className="mx-auto w-20 h-20 text-orange-400" />
+            <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Control aviar</h3>
+            <p className="text-base mt-2 text-center animate-fade-in">
+              Servicios de control y prevención de plagas aviares.
+            </p>
+          </div>
+
+         {/* Servicio 7 */}
+         <div className="bg-white/20 backdrop-blur-lg p-4 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+            <Flower2 className="mx-auto w-14 h-14 text-teal-400" />
+            <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Consultoria en seguridad y medio ambiente</h3>
+            <p className="text-base mt-2 text-center animate-fade-in">
+              Servicios de consultoría en seguridad y medio ambiente
+            </p>
+          </div>
+        </div>
       </div>
-    </header>
+    </div>
   );
 };
 
-export default Header;
+export default HeaderAbout;
+

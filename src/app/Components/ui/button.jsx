@@ -1,4 +1,3 @@
-// components/ui/button.jsx (o button.tsx si usas TypeScript)
 import React from "react";
 
 const Button = ({ children, className, ...props }) => {
