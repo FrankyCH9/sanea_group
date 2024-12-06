@@ -37,13 +37,13 @@ const About = () => {
         <h2 className="text-5xl font-extrabold leading-tight tracking-wide animate-slide-in">
           Aportamos Soluciones con Experiencia Profunda
         </h2>
-        <hr className="my-4 border-t-2 border-gray-300" />
+        <hr className="my-4 border-t-2 border-green-200" />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 px-0 relative z-20 justify-center">
         {/* Servicio 1 */}
-        <a href="/plaga" className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
-          <Rat className="mx-auto w-20 h-20 text-yellow-400" />
+        <a href="/plaga" className="bg-white/5 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+          <Rat className="mx-auto w-20 h-20 text-green-400" />
           <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Desratización</h3>
           <p className="text-base mt-2 text-center animate-fade-in">
             Control de roedores a través de captura y monitoreo.
@@ -51,7 +51,7 @@ const About = () => {
         </a>
 
         {/* Servicio 2 */}
-        <a href="/desinfeccion" className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+        <a href="/desinfeccion" className="bg-white/5 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
           <Bug className="mx-auto w-20 h-20 text-green-400" />
           <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Desinsectación</h3>
           <p className="text-base mt-2 text-center animate-fade-in">
@@ -60,8 +60,8 @@ const About = () => {
         </a>
 
         {/* Servicio 3 */}
-        <a href="/desinfeccion" className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
-          <SprayCan className="mx-auto w-20 h-20 text-blue-400" />
+        <a href="/desinfeccion" className="bg-white/5 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+          <SprayCan className="mx-auto w-20 h-20 text-green-400" />
           <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Desinfección</h3>
           <p className="text-base mt-2 text-center animate-fade-in">
             Desinfección especializada para la erradicación de virus, hongos y bacterias.
@@ -69,8 +69,8 @@ const About = () => {
         </a>
 
         {/* Servicio 4 */}
-        <a href="/limpieza" className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
-          <Droplets className="mx-auto w-20 h-20 text-purple-400" />
+        <a href="/limpieza" className="bg-white/5 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+          <Droplets className="mx-auto w-20 h-20 text-green-400" />
           <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Limpieza de Reservorios de agua</h3>
           <p className="text-base mt-2 text-center animate-fade-in">
             Desinfección y limpieza de reservorios de agua.
@@ -78,8 +78,8 @@ const About = () => {
         </a>
 
         {/* Servicio 5 */}
-        <a href="/reservorios" className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
-          <FlaskRound className="mx-auto w-20 h-20 text-red-400" />
+        <a href="/reservorios" className="bg-white/5 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+          <FlaskRound className="mx-auto w-20 h-20 text-green-400" />
           <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Mantenimiento de Reservorios de agua</h3>
           <p className="text-base mt-2 text-center animate-fade-in">
             Mantenimiento preventivo y correctivo para reservorios de agua.
@@ -87,8 +87,8 @@ const About = () => {
         </a>
 
         {/* Servicio 6 */}
-        <a href="/aviar" className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
-          <Bird className="mx-auto w-20 h-20 text-orange-400" />
+        <a href="/aviar" className="bg-white/5 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/20 transition-all duration-300">
+          <Bird className="mx-auto w-20 h-20 text-green-400" />
           <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Control Aviar</h3>
           <p className="text-base mt-2 text-center animate-fade-in">
             Control y manejo de plagas avícolas en edificios y sitios industriales.
@@ -96,7 +96,7 @@ const About = () => {
         </a>
 
         {/* Servicio 7 */}
-        <a href="/consultoria" className="bg-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
+        <a href="/consultoria" className="bg-white/5 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
           <Flower2 className="mx-auto w-20 h-20 text-emerald-400" />
           <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Consultoria en Seguridad y medio ambiente </h3>
           <p className="text-base mt-2 text-center animate-fade-in">
