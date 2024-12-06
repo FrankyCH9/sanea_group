@@ -21,8 +21,13 @@ const brands = [
   { src: 'https://i.postimg.cc/C5KtqMYw/Logo-inpe-2.png', alt: 'MSI' },
 ];
 
-// Flechas personalizadas
-const CustomPrevArrow = ({ onClick }) => {
+
+interface CustomArrowProps {
+  onClick?: () => void;
+}
+
+// Flecha anterior personalizada
+const CustomPrevArrow: React.FC<CustomArrowProps> = ({ onClick }) => {
   return (
     <button
       className="slick-arrow custom-prev-arrow"
@@ -34,17 +39,7 @@ const CustomPrevArrow = ({ onClick }) => {
   );
 };
 
-const CustomNextArrow = ({ onClick }) => {
-  return (
-    <button
-      className="slick-arrow custom-next-arrow"
-      style={{ right: '-15px', zIndex: 1 }}
-      onClick={onClick}
-    >
-      <FontAwesomeIcon icon={faChevronRight} />
-    </button>
-  );
-};
+
 
 // Componente principal del carrusel
 const Carrusel = () => {
@@ -56,8 +51,6 @@ const Carrusel = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
