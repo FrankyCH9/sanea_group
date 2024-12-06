@@ -37,46 +37,41 @@ const HeaderAbout = () => {
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30"></div>
-
-      {/* Header Content */}
       <header className="relative z-10 w-full max-w-7xl mx-auto px-8 py-6 text-white">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <div className="flex items-center space-x-6">
-            <img src="/images/logog.png" alt="Logo" className="h-16" />
-          </div>
+  <div className="flex justify-between items-center">
+    {/* Logo */}
+    <div className="flex items-center space-x-6">
+      <img src="/images/logog.png" alt="Logo" className="h-16" />
+    </div>
 
-          {/* Menú hamburguesa */}
-          <div className="lg:hidden flex items-center space-x-6">
-            <button
-              className="text-white text-2xl"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              {menuOpen ? '×' : '≡'}
-            </button>
-          </div>
+    {/* Menú hamburguesa */}
+    <div className="lg:hidden flex items-center space-x-6">
+      <button
+        className="text-white text-2xl focus:outline-none"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? '×' : '≡'}
+      </button>
+    </div>
 
-          {/* Navegación */}
-          <nav
-            className={`lg:flex space-x-12 items-center 
-              ${menuOpen ? 'block' : 'hidden'} 
-              lg:block transition-transform duration-300 ease-in-out transform ${menuOpen ? 'translate-y-0' : '-translate-y-full'}`}
-          >
-            <a
-              href="#"
-              className="text-lg text-white relative group transition-all"
-            >
-              Inicio
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
-            </a>
-            <a
-              href="#about"
-              className="text-lg text-white relative group transition-all"
-            >
-              Sobre Nosotros
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
-            </a>
-            <div className="relative">
+    {/* Navegación */}
+    <nav
+      className={`absolute lg:relative lg:flex lg:space-x-12 items-center bg-gray-900 lg:bg-transparent w-full lg:w-auto top-full left-0 lg:top-0 transition-transform duration-300 ${
+        menuOpen ? 'block' : 'hidden'
+      }`}
+    >
+      <a href="#" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
+        Inicio
+        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="#about" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
+        Sobre Nosotros
+        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
+      </a>
+
+      {/* Dropdown de Servicios */}
+      <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
                 className="text-lg text-white hover:text-emerald-400 flex items-center transition-all"
@@ -117,16 +112,15 @@ const HeaderAbout = () => {
                 </div>
               )}
             </div>
-            <a
-              href="#contact"
-              className="text-lg text-white relative group transition-all"
-            >
-              Contactanos
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
-            </a>
-          </nav>
-        </div>
-      </header>
+
+      <a href="#contact" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
+        Contáctanos
+        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
+      </a>
+    </nav>
+  </div>
+</header>
+
 
       {/* About Section */}
       <div id="about" className="relative z-10 w-full max-w-7xl mx-auto p-8 text-white min-h-screen">
