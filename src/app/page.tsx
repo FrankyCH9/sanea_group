@@ -1,22 +1,16 @@
 import Image from "next/image";
-import Header from "./Components/Header/Header";
-import Footer from "./Components/Footer/Footer";
-import Carrusel from "./Components/CarruselImg/Carrusel";
-import Whatsapp from "./Components/whatsap/Whatsapp";
-
-
+import Carrusel from "../Components/CarruselImg/Carrusel";
+import Whatsapp from "../Components/whatsap/Whatsapp";
+import About from "../Components/about/About";
 
 
 export default function Home() {
 
   return (
     <main>
-      <Header/>
+      <About/>
       <Carrusel/>
       <Whatsapp/>
-      <Footer/>
-    
-    
     </main>
   );
 }
