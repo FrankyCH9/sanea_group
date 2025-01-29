@@ -56,13 +56,7 @@ const Desinfeccion: React.FC = () => {
             químicos, en ambientes contaminados que puedan resultar nocivos para la salud.
           </p>
 
-          {/* Imagen Hexagonal con animación */}
-          <div className="mb-8 animate-slide-in">
-            <HexagonImage
-              src="https://www.saneagroupperu.com/assets/img/Servicios-Fotos/Desinfeccion3.jpg"
-              alt="Trabajador realizando desinfección en área exterior"
-            />
-          </div>
+          
 
           <h2 className="text-2xl font-semibold text-blue-700 mb-4">MONITOREO</h2>
           <ul className="list-disc pl-5 text-lg text-gray-700">

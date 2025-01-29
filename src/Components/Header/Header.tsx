@@ -31,7 +31,7 @@ const Header = () => {
           <nav
             className={`absolute lg:relative lg:flex lg:space-x-12 items-center bg-gray-900 lg:bg-transparent w-full lg:w-auto top-full left-0 lg:top-0 transition-transform duration-300 ${menuOpen ? 'block' : 'hidden'}`}
           >
-            <a href="#" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
+            <a href="/" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
               Inicio
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
             </a>
@@ -91,7 +91,7 @@ const Header = () => {
               )}
             </div>
 
-            <a href="#contact" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
+            <a href="/contacto" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
               Contáctanos
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
             </a>
