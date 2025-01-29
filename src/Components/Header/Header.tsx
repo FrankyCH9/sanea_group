@@ -36,7 +36,7 @@ const Header = () => {
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
             </a>
 
-            <a href="#about" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
+            <a href="/" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
               Sobre Nosotros
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
             </a>
@@ -57,27 +57,27 @@ const Header = () => {
                   <ul className="py-2">
                     <li>
                       <a href="/plaga" className="block px-4 py-2 hover:bg-emerald-400 hover:text-white">
-                        Desratización
+                        Control de plagas
                       </a>
                     </li>
                     <li>
                       <a href="/desinfeccion" className="block px-4 py-2 hover:bg-emerald-400 hover:text-white">
-                        Desinsectación
+                        Desinfección de ambientes
                       </a>
                     </li>
                     <li>
                       <a href="/limpieza" className="block px-4 py-2 hover:bg-emerald-400 hover:text-white">
-                        Limpieza de Reservorios de agua
+                        Limpieza y desinfección de reservorios de agua
                       </a>
                     </li>
                     <li>
                       <a href="/reservorio" className="block px-4 py-2 hover:bg-emerald-400 hover:text-white">
-                        Mantenimiento de Reservorios de agua
+                        Mantenimiento de reservorios de agua
                       </a>
                     </li>
                     <li>
                       <a href="/aviar" className="block px-4 py-2 hover:bg-emerald-400 hover:text-white">
-                        Control aviar
+                      Control aviar y animales menores
                       </a>
                     </li>
                     <li>
