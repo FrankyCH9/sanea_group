@@ -48,7 +48,7 @@ const Carrusel = () => {
     ]
   };
 
-  const whatsappNumber = "944202238";
+  const whatsappNumber = "998998318";
   const whatsappMessage = encodeURIComponent("¿En qué podemos ayudarte? Somos [Nombre de la Empresa].");
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
