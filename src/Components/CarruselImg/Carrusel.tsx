@@ -14,7 +14,7 @@ const brands = [
   { src: "/images/logo/CERRO.png", alt: "Logo INPE" },
   { src: "/images/logo/GOBIERNO.jpg", alt: "Logo INPE" },
   { src: "/images/logo/LLAMAGAS.png", alt: "Logo INPE" },
-  { src: "/images/logo/MAS VENTAS.jpg", alt: "Logo INPE" },
+  { src: "/images/logo/logo.png", alt: "Logo INPE" },
   { src: "/images/logo/PLASTIGESA.jpg", alt: "Logo INPE" },
   { src: "/images/logo/PNP.png", alt: "Logo INPE" },
   { src: "/images/logo/Sedapal.jpg", alt: "Logo INPE" },
