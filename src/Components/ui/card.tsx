@@ -10,11 +10,13 @@ export const Card: React.FC<CardProps> = ({ children }) => {
 
 interface CardContentProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-export const CardContent: React.FC<CardContentProps> = ({ children }) => {
-  return <div className="p-4">{children}</div>;
+export const CardContent: React.FC<CardContentProps> = ({ children, className }) => {
+  return <div className={`p-4 ${className}`}>{children}</div>;
 };
+
 
 interface CardHeaderProps {
   children: React.ReactNode;

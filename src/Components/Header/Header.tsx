@@ -1,6 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import { IoChevronDown } from 'react-icons/io5'; // Icono de flecha
+import { MapPin } from "lucide-react";
+
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -36,7 +38,7 @@ const Header = () => {
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
             </a>
 
-            <a href="/" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
+            <a href="/nosotros" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
               Sobre Nosotros
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
             </a>
@@ -77,7 +79,7 @@ const Header = () => {
                     </li>
                     <li>
                       <a href="/aviar" className="block px-4 py-2 hover:bg-emerald-400 hover:text-white">
-                      Control aviar y animales menores
+                        Control aviar y animales menores
                       </a>
                     </li>
                     <li>
@@ -93,6 +95,11 @@ const Header = () => {
 
             <a href="/contacto" className="block lg:inline-block text-lg px-4 py-2 lg:py-0 relative group">
               Contáctanos
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
+            </a>
+            <a href="/ubi" className="flex items-center gap-2 text-lg px-4 py-2 lg:py-0 relative group">
+              <MapPin size={20}  />
+              <span>Ubícanos</span>
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-emerald-400 transition-all group-hover:w-full"></span>
             </a>
           </nav>

@@ -45,9 +45,10 @@ const Footer = () => {
         <div className="space-y-4">
           <h2 className="text-2xl font-medium">Navegacion</h2>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-emerald-400 transition-colors">Inicio</a></li>
-            <li><a href="#" className="hover:text-emerald-400 transition-colors">Sobre Nosotros</a></li>
-            <li><a href="#" className="hover:text-emerald-400 transition-colors">Contactanos</a></li>
+            <li><a href="/" className="hover:text-emerald-400 transition-colors">Inicio</a></li>
+            <li><a href="/nosotros" className="hover:text-emerald-400 transition-colors">Sobre Nosotros</a></li>
+            <li><a href="/contacto" className="hover:text-emerald-400 transition-colors">Contactanos</a></li>
+            <li><a href="/ubi" className="hover:text-emerald-400 transition-colors">Ubicación</a></li>
           </ul>
 
           {/* Newsletter Subscription */}
