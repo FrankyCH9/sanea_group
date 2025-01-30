@@ -11,16 +11,16 @@ import Image from 'next/image';
 // Lista de marcas con rutas de imágenes
 const brands = [
   { src: "/images/logo/CISSAC.jpg", alt: "Logo INPE" },
-  { src: "/images/logo/CERRO.PNG", alt: "Logo INPE" },
-  { src: "/images/logo/GOBIERNO.JPG", alt: "Logo INPE" },
-  { src: "/images/logo/LLAMAGAS.PNG", alt: "Logo INPE" },
+  { src: "/images/logo/CERRO.png", alt: "Logo INPE" },
+  { src: "/images/logo/GOBIERNO.jpg", alt: "Logo INPE" },
+  { src: "/images/logo/LLAMAGAS.png", alt: "Logo INPE" },
   { src: "/images/logo/MAS VENTAS.jpg", alt: "Logo INPE" },
   { src: "/images/logo/PLASTIGESA.jpg", alt: "Logo INPE" },
   { src: "/images/logo/PNP.png", alt: "Logo INPE" },
   { src: "/images/logo/Sedapal.jpg", alt: "Logo INPE" },
   { src: "/images/logo/Socosani.png", alt: "Logo INPE" },
   { src: "/images/logo/SPAZIO.png", alt: "Logo INPE" },
-  { src: "/images/logo/TISU.JPg", alt: "Logo INPE" }
+  { src: "/images/logo/TISU.jpg", alt: "Logo INPE" }
 ];
 
 const Carrusel = () => {
