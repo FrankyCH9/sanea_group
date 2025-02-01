@@ -13,13 +13,13 @@ const Desinfeccion: React.FC = () => {
     {
       name: "Desinfectante 1",
       description: "Desinfectante potente a base de Guadinina Polimérica.",
-      imageSrc: "/images/Servicios-fotos/Desinfeccion.jpeg",
+      imageSrc: "/images/Desinfeccion/10.jpeg",
       imageAlt: "Desinfectante 1",
     },
     {
       name: "Desinfectante 2",
       description: "Eliminación de bacterias, virus, hongos y levaduras.",
-      imageSrc: "/images/Servicios-fotos/desinfeccion2.jpeg",
+      imageSrc: "/images/Desinfeccion/11.jpeg",
       imageAlt: "Desinfectante 2",
     },
   ];

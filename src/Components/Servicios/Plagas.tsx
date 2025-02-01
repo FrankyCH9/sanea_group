@@ -21,13 +21,13 @@ const Plagas: React.FC = () => {
         <div className="md:w-1/2 flex justify-center gap-12 flex-wrap">
           {/* Imagen hexagonal grande */}
           <HexagonImage
-            src="/images/Servicios-Fotos/12.jpeg"
+            src="/images/Control/1.jpeg"
             alt="Escalera y equipo de control de plagas"
           />
 
           {/* Segunda imagen hexagonal */}
           <HexagonImage
-            src="/images/Servicios-Fotos/Desratizacion.jpeg"
+            src="/images/Control/2.jpeg"
             alt="Técnico aplicando tratamiento"
           />
         </div>

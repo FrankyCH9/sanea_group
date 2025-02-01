@@ -91,6 +91,7 @@ export default function Reservorio() {
                   fill
                   className="object-cover rounded-lg"
                 />
+                
               </div>
               <p className="mt-4 text-center text-sm text-gray-600">
                 Garantizamos calidad y seguridad en el mantenimiento de reservorios

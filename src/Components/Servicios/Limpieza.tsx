@@ -32,9 +32,9 @@ const Limpieza: React.FC = () => {
           </div>
 
           {/* Imagen descriptiva con animación */}
-          <div className="relative h-64 w-full rounded-lg overflow-hidden animate-slide-in">
+          <div className="relative h-96 w-full rounded-lg overflow-hidden animate-slide-in">
             <Image
-              src="/images/Servicios-Fotos/tanqueagua2.jpg"
+              src="/images/Reservorios/12.jpeg"
               alt="Limpieza de reservorio"
               fill
               className="object-cover"
@@ -51,7 +51,7 @@ const Limpieza: React.FC = () => {
           <div className="grid gap-8">
             {/* Hexagonal images */}
             <HexagonImage
-              src="/images/Servicios-Fotos/10.jpeg"
+              src="/images/Reservorios/13.jpeg"
               alt="Servicio de limpieza 1"
             />
             <HexagonImage

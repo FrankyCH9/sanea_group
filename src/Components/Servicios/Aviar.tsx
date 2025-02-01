@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { Bird, Shield, AlertCircle } from 'lucide-react';
-import { HexagonImage } from "../exagonal/HexagonImage";
+import { Bird, Shield, AlertCircle } from "lucide-react";
 import Image from "next/image";
 
 export default function Aviar() {
@@ -23,21 +22,22 @@ export default function Aviar() {
             Control Aviar y Animales Menores
           </h1>
           <p className="text-gray-600 mb-4">
-            Las aves son portadoras de gran cantidad de parásitos, como garrapatas, 
-            moscas de la paloma y piojos, así como de enfermedades zoonóticas 
-            (que afectan a los humanos) como la clamidiosis, salmonelosis, 
+            Las aves son portadoras de gran cantidad de parásitos, como garrapatas,
+            moscas de la paloma y piojos, así como de enfermedades zoonóticas
+            (que afectan a los humanos) como la clamidiosis, salmonelosis,
             colibacilosis, encefalitis equina o tuberculosis aviar.
           </p>
           <p className="text-gray-600">
-            Los excrementos de las aves poseen un alto grado de ácido 
-            fosfórico y urea que además de emitir mal olor, acelera 
-            el proceso de corrosión de los metales aumentando 
+            Los excrementos de las aves poseen un alto grado de ácido
+            fosfórico y urea que además de emitir mal olor, acelera
+            el proceso de corrosión de los metales aumentando
             costos de mantenimiento para la industria.
           </p>
         </div>
 
         {/* Tarjetas de información */}
         <div className="grid md:grid-cols-2 gap-8">
+          {/* Métodos de tratamiento */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -46,34 +46,32 @@ export default function Aviar() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div>
-                <h3 className="font-semibold text-blue-600 mb-2">Puas Anti - Aves</h3>
-                <p className="text-sm">
-                  Es un método eficaz para ayudar al control de las palomas, 
-                  la instalación se realiza en todos los puntos donde las aves 
-                  pernocten o quieran realizar sus nidos.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-blue-600 mb-2">Colocación de Gel - Anti Aves</h3>
-                <p className="text-sm">
-                  Mantiene las mismas propiedades que el repelente líquido, 
-                  no tóxico al ser ingerido, ideal para cornizas, barandas, 
-                  techos y cualquier punto que sirva de aterrizaje para las palomas.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-blue-600 mb-2">Jaulas Capturadoras de Palomas</h3>
-                <p className="text-sm">
-                  Se instalan jaulas de captura de palomas según la ubicación y comportamiento, 
-                  de acuerdo al control integral anual que se realice, o infestación de palomas. 
-                  La captura viene por medios de atrayentes naturales como maíz y agua, las 
-                  palomas entran en la jaula sin posibilidad de salida.
-                </p>
-              </div>
+              {[
+                {
+                  title: "Púas Anti - Aves",
+                  description:
+                    "Es un método eficaz para ayudar al control de las palomas. La instalación se realiza en todos los puntos donde las aves pernocten o quieran realizar sus nidos."
+                },
+                {
+                  title: "Colocación de Gel - Anti Aves",
+                  description:
+                    "Mantiene las mismas propiedades que el repelente líquido, no tóxico al ser ingerido. Ideal para cornizas, barandas, techos y cualquier punto de aterrizaje para las palomas."
+                },
+                {
+                  title: "Jaulas Capturadoras de Palomas",
+                  description:
+                    "Se instalan jaulas de captura según la ubicación y comportamiento. La captura se realiza con atrayentes naturales como maíz y agua, impidiendo la salida de las palomas."
+                }
+              ].map((item, index) => (
+                <div key={index} className="mb-4">
+                  <h3 className="font-semibold text-blue-600 mb-2">{item.title}</h3>
+                  <p className="text-sm">{item.description}</p>
+                </div>
+              ))}
             </CardContent>
           </Card>
 
+          {/* Tratamientos contra animales menores */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -93,17 +91,13 @@ export default function Aviar() {
                 </h3>
                 <ul className="list-disc list-inside space-y-2 text-sm">
                   <li>
-                    Nunca se debe abrir la puerta de la jaula, porque los animales menores 
-                    tratarán de escapar lanzándose hacia el personal.
+                    Nunca se debe abrir la puerta de la jaula, porque los animales menores tratarán de escapar lanzándose hacia el personal.
                   </li>
                   <li>
-                    Nuestro alcance de servicio consiste en la captura y reubicación, siendo 
-                    enfáticos en que no maltratamos ni comercializamos estos animales.
+                    Nuestro alcance de servicio consiste en la captura y reubicación, siendo enfáticos en que no maltratamos ni comercializamos estos animales.
                   </li>
                   <li>
-                    Se debe coordinar con alguna institución pública o privada que albergue a 
-                    estos animales a fin de que puedan ser transportados en las jaulas hacia su 
-                    destino final.
+                    Se debe coordinar con alguna institución pública o privada que albergue a estos animales para su traslado a su destino final.
                   </li>
                 </ul>
               </div>
@@ -111,20 +105,21 @@ export default function Aviar() {
           </Card>
         </div>
 
-        {/* Imágenes hexagonales */}
-        <div className="grid grid-cols-2 gap-4">
-          <HexagonImage
-            src="/Servicios/Desinfeccion.jpg"
-            alt="Sistema de púas anti-aves"
-            width={300}
-            height={200}
-          />
-          <HexagonImage
-            src="/Servicios/Desinfeccion.jpg"
-            alt="Aplicador de gel anti-aves"
-            width={300}
-            height={200}
-          />
+        {/* Imágenes hexagonales centradas */}
+        <div className="flex justify-center gap-40">
+          {[
+            { src: "/images/15.jpeg", alt: "Sistema de púas anti-aves" },
+            { src: "/images/16.jpeg", alt: "Aplicador de gel anti-aves" }
+          ].map((image, index) => (
+            <Image
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              width={300}
+              height={200}
+              className="rounded-lg shadow-md"
+            />
+          ))}
         </div>
       </div>
     </div>
