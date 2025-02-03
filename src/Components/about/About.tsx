@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Rat, Bug, SprayCan, Droplets, FlaskRound, Bird, Flower2 } from 'lucide-react';
+import { Rat, Bug, SprayCan, Droplets, FlaskRound, Bird, Flower2, Cog } from 'lucide-react';
 
 const About = () => {
   const [isClient, setIsClient] = useState(false);
@@ -79,7 +79,7 @@ const About = () => {
 
         {/* Servicio 5 */}
         <a href="/reservorio" className="bg-white/5 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-white/30 transition-all duration-300">
-          <FlaskRound className="mx-auto w-20 h-20 text-green-400" />
+          <Cog className="mx-auto w-20 h-20 text-green-400" />
           <h3 className="font-semibold text-xl mt-4 text-center animate-slide-in">Mantenimiento de Reservorios de agua</h3>
           <p className="text-base mt-2 text-center animate-fade-in">
             Mantenimiento preventivo y correctivo para reservorios de agua.

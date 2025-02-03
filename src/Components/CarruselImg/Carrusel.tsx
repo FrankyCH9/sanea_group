@@ -20,7 +20,10 @@ const brands = [
   { src: "/images/logo/Sedapal.jpg", alt: "Logo INPE" },
   { src: "/images/logo/Socosani.png", alt: "Logo INPE" },
   { src: "/images/logo/SPAZIO.png", alt: "Logo INPE" },
-  { src: "/images/logo/TISU.jpg", alt: "Logo INPE" }
+  { src: "/images/logo/TISU.jpg", alt: "Logo INPE" },
+  { src: "/images/logo/als.png", alt: "Logo INPE" },
+  { src: "/images/logo/alsur.png", alt: "Logo INPE" },
+  { src: "/images/logo/katya.png", alt: "Logo INPE" }
 ];
 
 const Carrusel = () => {
@@ -53,7 +56,9 @@ const Carrusel = () => {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <div className="brand-carousel-container">
+    <div className="brand-carousel-container text-center">
+      
+
       <div className="text-center my-4">
         <a
           href={whatsappLink}
@@ -64,7 +69,9 @@ const Carrusel = () => {
           Solicita una cotización
         </a>
       </div>
+      <h2 className="text-6xl font-bold text-green-800 mb-6 mt-4">Nuestros Clientes</h2>
 
+      <div  className='overflow-hidden'>
       <Slider {...settings}>
         {brands.map((brand, index) => (
           <div key={index} className="brand-slide flex items-center justify-center mt-10 mb-10">
@@ -80,6 +87,7 @@ const Carrusel = () => {
           </div>
         ))}
       </Slider>
+      </div>
     </div>
   );
 };

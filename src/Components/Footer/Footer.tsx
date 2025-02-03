@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand Column */}
         <div className="space-y-4">
-          <h2 className="text-emerald-400 text-2xl font-medium">
-            Sanea <span className="text-blue-500">Group</span>
-          </h2>
+        <a href="/" className="flex items-center">
+              <img src="/images/Logo_SinFondo.png" alt="Logo" className="h-16" />
+            </a>
 
           <div className="space-y-3">
             <div className="flex items-center gap-2">
@@ -53,14 +53,7 @@ const Footer = () => {
 
           {/* Newsletter Subscription */}
           <div className="mt-8 space-y-4">
-            <Input
-              type="email"
-              placeholder="Direccion de Correo"
-              className="bg-slate-800 border-slate-700"
-            />
-            <Button className="w-full bg-emerald-500 hover:bg-emerald-600">
-              Suscribirse
-            </Button>
+            
           </div>
         </div>
       </div>
