@@ -6,21 +6,19 @@ export default function Reservorio() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-8xl mx-auto space-y-12">
-        {/* Imagen principal */}
-        <div className="relative w-full h-96 bg-gray-200 overflow-hidden rounded-lg shadow-lg animate-slide-in">
-          <Image
-            src="/images/Carrousel/22.jpeg"
-            alt="Control de plagas"
-            fill
-            className="object-cover rounded-lg"
+        <div className="relative mb-12 animate-fade-in-up">
+          <img
+            src="https://www.ragscorp.com/wp-content/uploads/2018/12/control-de-plagas-fumigacion.jpg"
+            alt="Ubicación"
+            className="w-full h-64 object-cover rounded-3xl shadow-lg"
           />
+          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 rounded-3xl">
+            <h2 className="text-6xl font-bold text-white">Mantenimiento de Reservorios de Agua</h2>
+          </div>
         </div>
 
         {/* Título y descripción */}
         <div className="text-left space-y-4">
-          <h1 className="text-4xl font-extrabold text-blue-800 animate-fade-in">
-            Mantenimiento de Reservorios de Agua
-          </h1>
           <p className="text-lg text-gray-700 leading-relaxed">
             El mantenimiento de reservorios incluye actividades para corregir fallas y
             garantizar el buen funcionamiento de sus estructuras.
@@ -91,7 +89,7 @@ export default function Reservorio() {
                   fill
                   className="object-cover rounded-lg"
                 />
-                
+
               </div>
               <p className="mt-4 text-center text-sm text-gray-600">
                 Garantizamos calidad y seguridad en el mantenimiento de reservorios

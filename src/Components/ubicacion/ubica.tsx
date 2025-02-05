@@ -16,8 +16,8 @@ export default function Ubica() {
           alt="Ubicación"
           className="w-full h-64 object-cover rounded-3xl shadow-lg"
         />
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
-          <h2 className="text-3xl font-bold text-white">Nuestra Ubicación</h2>
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-30 rounded-3xl">
+          <h2 className="text-6xl font-bold text-white">Nuestra Ubicación</h2>
         </div>
       </div>
 

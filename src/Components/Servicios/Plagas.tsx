@@ -6,13 +6,15 @@ const Plagas: React.FC = () => {
   return (
     <div className="container mx-auto px-6 py-12 flex flex-col gap-12 bg-gray-50">
       {/* Imagen horizontal al inicio con animación */}
-      <div className="relative w-full h-72 bg-gray-200 overflow-hidden rounded-lg shadow-lg animate-slide-in">
-        <Image
-          src="/images/Carrousel/5.png" // Reemplaza con la ruta de tu imagen
-          alt="Control de plagas"
-          fill
-          className="object-cover rounded-lg"
+      <div className="relative mb-12 animate-fade-in-up">
+        <img
+          src="https://www.ragscorp.com/wp-content/uploads/2018/12/control-de-plagas-fumigacion.jpg"
+          alt="Ubicación"
+          className="w-full h-64 object-cover rounded-3xl shadow-lg"
         />
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 rounded-3xl">
+          <h2 className="text-6xl font-bold text-white">Control de plagas</h2>
+        </div>
       </div>
 
       {/* Contenido principal */}
@@ -34,9 +36,7 @@ const Plagas: React.FC = () => {
 
         {/* Sección de texto */}
         <div className="md:w-1/2">
-          <h2 className="text-4xl font-extrabold text-blue-800 mb-6 animate-fade-in-up">
-            Control de plagas
-          </h2>
+          
           <p className="mb-6 text-lg text-gray-800 leading-relaxed">
             Utilizamos metodologías y procesos eficientes en la eliminación de todo tipo de
             plagas rasteras o voladoras a niveles aceptables. Nuestros tratamientos son

@@ -5,22 +5,22 @@ import Image from "next/image";
 export default function Aviar() {
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Imagen de encabezado */}
-      <div className="relative w-full h-72 bg-gray-200 overflow-hidden rounded-lg animate-slide-in">
-        <Image
-          src="/images/Carrousel/6.png"
-          alt="Control de plagas"
-          fill
-          className="object-cover rounded-lg"
-        />
-      </div>
+      <div className="relative mb-12 animate-fade-in-up">
+  <img 
+    src="https://www.ragscorp.com/wp-content/uploads/2018/12/control-de-plagas-fumigacion.jpg"
+    alt="Ubicación"
+    className="w-full h-64 object-cover rounded-3xl shadow-lg"
+  />
+  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 rounded-3xl">
+    <h2 className="text-6xl font-bold text-white">Control Aviar y Animales Menores</h2>
+  </div>
+</div>
+
 
       <div className="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
         {/* Texto de introducción */}
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-blue-700 mb-6 mt-4">
-            Control Aviar y Animales Menores
-          </h1>
+         
           <p className="text-gray-600 mb-4">
             Las aves son portadoras de gran cantidad de parásitos, como garrapatas,
             moscas de la paloma y piojos, así como de enfermedades zoonóticas

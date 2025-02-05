@@ -27,19 +27,18 @@ const Desinfeccion: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-12 font-sans bg-gray-50">
       {/* Imagen principal con animación */}
-      <div className="relative w-full h-72 bg-gray-200 overflow-hidden rounded-lg mb-12 shadow-lg animate-slide-in">
-        <Image
-          src="/images/Carrousel/4.png"
-          alt="Control de plagas"
-          fill
-          className="object-cover rounded-lg"
+      <div className="relative mb-12 animate-fade-in-up">
+        <img
+          src="https://www.ragscorp.com/wp-content/uploads/2018/12/control-de-plagas-fumigacion.jpg"
+          alt="Ubicación"
+          className="w-full h-64 object-cover rounded-3xl shadow-lg"
         />
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 rounded-3xl">
+          <h2 className="text-6xl font-bold text-white">Desinfección de Ambientes</h2>
+        </div>
       </div>
 
-      {/* Título de la sección con animación */}
-      <h1 className="text-4xl font-bold text-blue-800 text-center mb-12 animate-fade-in-up">
-        Desinfección de Ambientes
-      </h1>
+     
 
       <div className="grid md:grid-cols-2 gap-12">
         {/* Sección de Descripción con animaciones */}

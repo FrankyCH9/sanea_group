@@ -4,20 +4,16 @@ import { HexagonImage } from "../exagonal/HexagonImage";
 const Limpieza: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 font-sans bg-gray-50">
-      {/* Imagen principal con animación */}
-      <div className="relative w-full h-72 bg-gray-200 overflow-hidden rounded-lg shadow-lg animate-slide-in">
-        <Image
-          src="/images/Carrousel/1.jpeg" // Reemplaza con la ruta de tu imagen
-          alt="Control de plagas"
-          fill
-          className="object-cover rounded-lg"
+      <div className="relative mb-12 animate-fade-in-up">
+        <img
+          src="https://www.ragscorp.com/wp-content/uploads/2018/12/control-de-plagas-fumigacion.jpg"
+          alt="Ubicación"
+          className="w-full h-64 object-cover rounded-3xl shadow-lg"
         />
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 rounded-3xl">
+          <h2 className="text-6xl font-bold text-white">Limpieza y Desinfección de Reservorios de Agua</h2>
+        </div>
       </div>
-
-      {/* Título principal con animación */}
-      <h1 className="text-4xl font-bold text-blue-700 text-center mb-12 mt-4 animate-fade-in-up">
-        Limpieza y Desinfección de Reservorios de Agua
-      </h1>
 
       <div className="grid lg:grid-cols-2 gap-8 items-start">
         {/* Sección de Descripción con animaciones */}
