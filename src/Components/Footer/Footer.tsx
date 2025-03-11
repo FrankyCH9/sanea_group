@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand Column */}
         <div className="space-y-4">
-        <a href="/" className="flex items-center">
-              <img src="/images/Logo_SinFondo.png" alt="Logo" className="h-16" />
-            </a>
+          <a href="/" className="flex items-center">
+            <img src="/images/Logo_SinFondo.png" alt="Logo" className="h-16" />
+          </a>
 
           <div className="space-y-3">
             <div className="flex items-center gap-2">
@@ -53,7 +53,7 @@ const Footer = () => {
 
           {/* Newsletter Subscription */}
           <div className="mt-8 space-y-4">
-            
+
           </div>
         </div>
       </div>
@@ -82,7 +82,13 @@ const Footer = () => {
 
           </div>
 
-          <p className="text-slate-400 text-sm">© 2024 Sanea Group - All rights reserved.</p>
+          <p className="text-slate-400 text-sm">
+            © {new Date().getFullYear()} Sanea Group - Creado por 
+            <a href="/https://www.facebook.com/profile.php?id=61562778300214" className="text-blue-400 hover:underline ml-2">
+              Fiel-Store
+            </a>
+          </p>
+
         </div>
       </div>
     </footer>

@@ -65,27 +65,26 @@ const Consultoria = () => {
         </Card>
       </div>
 
-      {/* Imágenes hexagonales con mejor tamaño y alineación */}
       <div className="grid md:grid-cols-2 gap-8 animate-slide-in">
-        <div className="relative w-full h-64 md:h-80 overflow-hidden rounded-lg">
-          <Image
-            src="/images/Capacitacion1.jpg"
-            alt="Training session room with workers"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-          />
-        </div>
-        <div className="relative w-full h-64 md:h-80 overflow-hidden rounded-lg">
-          <Image
-            src="/images/Capacitacion2.jpg"
-            alt="Presentation room setup"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-          />
-        </div>
+      <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
+        <Image
+          src="/images/Capacitacion1.jpg"
+          alt="Training session room with workers"
+          layout="fill"
+          objectFit="cover"
+          className="absolute inset-0 w-full h-full rounded-lg"
+        />
       </div>
+      <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg">
+        <Image
+          src="/images/Capacitacion2.jpg"
+          alt="Presentation room setup"
+          layout="fill"
+          objectFit="cover"
+          className="absolute inset-0 w-full h-full rounded-lg"
+        />
+      </div>
+    </div>
     </div>
   );
 };
